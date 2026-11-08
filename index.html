@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safisha Laundry Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span id="brand-name">Safisha Laundry</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#prices">Prices</a>
+        <a href="#how">How it works</a>
+        <a href="#book">Book</a>
+        <a href="#track">Track order</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container">
+        <span class="badge">Demo prototype</span>
+        <h1 id="hero-title">Laundry done for you, near campus.</h1>
+        <p id="hero-tagline" class="lead">By students, for students.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#book">Book a pickup</a>
+          <a class="btn btn-outline" href="#prices">See prices</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <h2>Prices</h2>
+        <p class="muted">All prices are in KSh. Pickup and delivery fees are added at booking.</p>
+        <div id="price-list" class="card-grid"></div>
+        <p class="muted" id="fee-note"></p>
+      </div>
+    </section>
+
+    <section class="section alt" id="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><strong>Book online.</strong> Choose your service, hostel and pickup time.</li>
+          <li><strong>We collect.</strong> Pick up from your hostel or drop your clothes at our pickup point.</li>
+          <li><strong>We wash and fold.</strong> Your laundry is cleaned, dried and ironed as ordered.</li>
+          <li><strong>Get it back.</strong> Track progress and receive your clean clothes.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="book">
+      <div class="container narrow">
+        <h2>Book a laundry order</h2>
+        <p class="muted">This is a <strong>Demo</strong> form. No real payment or message is sent.</p>
+        <form id="booking-form" class="form" novalidate>
+          <label>Full name
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </label>
+          <label>Phone number (Kenya)
+            <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXX" required autocomplete="tel">
+          </label>
+          <label>Service area
+            <select id="area" name="area" required></select>
+          </label>
+          <label>Service
+            <select id="service" name="service" required></select>
+          </label>
+          <label>Weight (kg) or number of items
+            <input type="number" id="quantity" name="quantity" min="1" step="1" value="1" required>
+          </label>
+          <label>Order type
+            <select id="fulfilment" name="fulfilment">
+              <option value="pickup">Pickup from my hostel</option>
+              <option value="dropoff">I will drop off</option>
+            </select>
+          </label>
+          <label>Preferred date
+            <input type="date" id="date" name="date" required>
+          </label>
+          <label>Notes (optional)
+            <textarea id="notes" name="notes" rows="2"></textarea>
+          </label>
+
+          <div class="estimate" aria-live="polite">
+            Estimated total: <strong id="estimate">KSh 0</strong>
+          </div>
+
+          <p id="form-errors" class="error" role="alert"></p>
+          <button type="submit" class="btn btn-primary">Place demo order</button>
+        </form>
+
+        <div id="confirmation" class="confirmation" hidden></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="track">
+      <div class="container narrow">
+        <h2>Track your order</h2>
+        <form id="track-form" class="track-form">
+          <label class="sr-only" for="ref">Booking reference</label>
+          <input type="text" id="ref" placeholder="Enter reference, e.g. SF-12345" required>
+          <button type="submit" class="btn btn-primary">Check status</button>
+        </form>
+        <div id="track-result" class="track-result" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contact us</h2>
+        <ul class="contact-list">
+          <li><strong>Phone:</strong> <span id="contact-phone"></span></li>
+          <li><strong>Email:</strong> <span id="contact-email"></span></li>
+          <li><strong>Pickup point:</strong> <span id="contact-pickup"></span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong id="footer-name">Safisha Laundry Services</strong></p>
+      <p class="muted">Prototype demo. No real payments or messages are sent.</p>
+    </div>
+  </footer>
+
+  <a id="whatsapp-btn" class="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
